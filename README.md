@@ -2,9 +2,6 @@
 猜数字_小游戏
 
 
-
-#include<stdlib.h>//RAND_MAX放的头文件
-#include<time.h>
 void menu()
 {
 	printf("********************\n");
@@ -20,7 +17,7 @@ void game()
 	int guess = 0;//接受猜的数字
 	//时间戳
 	ret = rand()%100+1;//生成1-100之间的随机数
-	printf("%d\n", ret);
+	//printf("%d\n", ret);
 	//2.猜数字
 	while(1)
 	{
@@ -44,6 +41,7 @@ void game()
 int main()
 {
 	int input = 0;
+	srand((unsigned int)time(NULL));
 	do
 	{
 		menu();
